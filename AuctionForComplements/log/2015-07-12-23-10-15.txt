@@ -1,0 +1,21 @@
+run	-1	'Willow is running on port 8000'
+take	0	"{'id': 'go'}"
+add	0	'(body) <h1>Auction For Complements \xe3\x83\xa2\xe3\x83\x8b\xe3\x82\xbf\xe3\x83\xbc</h1>'
+add	0	'(body) <h2>\xe5\x88\x9d\xe6\x9c\x9f\xe8\xa8\xad\xe5\xae\x9a</h2>'
+add	0	"(body)\n<p id='numset'>\xe5\x8f\x82\xe5\x8a\xa0\xe4\xba\xba\xe6\x95\xb0\xe3\x82\x92\xe5\x85\xa5\xe5\x8a\x9b\xe3\x81\x97\xe3\x81\xa6\xe3\x81\x8f\xe3\x81\xa0\xe3\x81\x95\xe3\x81\x84\xe3\x80\x82<br /><input id='plnum' type='text' /><input id='go' type='submit'></p>"
+take	1	"{'tag': 'tc'}"
+add	1	'(body) <h1>Auction For Complements \xe8\xa2\xab\xe9\xa8\x93\xe8\x80\x85No.1</h1>'
+add	1	"(body)\n<p id='wait1'>\xe3\x81\x97\xe3\x81\xb0\xe3\x82\x89\xe3\x81\x8f\xe3\x81\x8a\xe5\xbe\x85\xe3\x81\xa1\xe3\x81\x8f\xe3\x81\xa0\xe3\x81\x95\xe3\x81\x84\xe3\x80\x82</p>"
+put	0	"{u'time': 1436710269387, u'tag': u'click', u'id': u'go', u'client': 0}"
+took	0	"{u'client': 0, u'tag': u'click', u'id': u'go', u'time': 1436710269387}"
+peek	0	'(#plnum)'
+take	0	"{'ticket': 1, 'tag': 'peek'}"
+put	0	"{u'ticket': 1, u'tag': u'peek', u'time': 1436710269398, u'value': u'2', u'client': 0}"
+took	0	"{u'ticket': 1, u'tag': u'peek', u'client': 0, u'value': u'2', u'time': 1436710269398}"
+take	0	"{'id': 'go'}"
+hide	0	'(#numset)'
+add	0	"(body)\n<p id='numset_end'>\xe5\xae\x9f\xe9\xa8\x93\xe4\xba\xba\xe6\x95\xb0\xef\xbc\x9a<span id='num'></span>\xe4\xba\xba</p>"
+add	0	'(#num) 2'
+add	0	"(body)\n<p id='priceset'>\xe7\xa7\x81\xe7\x9a\x84\xe4\xbe\xa1\xe5\x80\xa4\xe3\x82\x92\xe5\x85\xa5\xe5\x8a\x9b\xe3\x81\x97\xe3\x81\xa6\xe3\x81\x8f\xe3\x81\xa0\xe3\x81\x95\xe3\x81\x84\xe3\x80\x82<br />I-type1<br /><span id='ipr1'></span><br />I-type2<br /><span id='ipr2'></span><br />J-type<br /><span id='jpr'></span><br /><input id='go' type='submit'></p>"
+add	0	"(#ipr1) <input id='pr0' type='text' /><br />"
+add	0	"(#ipr2) <input id='pr1' type='text' /><br />"
