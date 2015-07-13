@@ -19,7 +19,7 @@ you can change the variables
 """
 
 # You can change the variables
-plnum = 4
+plnum =  5
 Round =  3
 
 f1 = open('data/data1.csv', 'ab')

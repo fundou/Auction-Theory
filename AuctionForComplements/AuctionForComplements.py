@@ -7,7 +7,7 @@ def session(me):
     # 0 : The First Price Auction
     # 1 : Vickrey Auction
     # 2 : The Reference Rule Auction
-    auction = 0
+    auction = 1
     Round = 3
 
     if me == 0:
@@ -61,7 +61,7 @@ def session(me):
         take({"client": me})
         starthide(1)
         add("<h2>実験開始</h2>", "#main")
-        log("mechanism", "type", "bid")
+        log("mechanism", "is", auction)
         # Start!(c)
         for time in range(Round):
             add("<h2>第%sラウンド</h2>" % (time+1), "#main")
@@ -94,7 +94,6 @@ def session(me):
             for i in range(plnum):
                 msg = take({"tag": "d"})
                 add("タイプ%s被験者No.%sが%s円の入札を行いました。<br />" % (msg["type"], msg["client"], msg["bid"]), "#main")
-                log(auction, msg["type"], msg["bid"])
                 if msg["type"] == "i1":
                     if int(msg["bid"]) > i1bid:
                         i1bid = int(msg["bid"])
@@ -256,6 +255,7 @@ def session(me):
                     bid = int(bid)
                     if (bid >= 0) and (bid <= 200):
                         let("", "#info")
+                        log(value, mytype, bid)
                         break
                     else:
                         counter += 1
